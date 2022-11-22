@@ -51,3 +51,16 @@ a.	Toàn bộ các file .c sẽ được compile thành file .o và lưu ở th�
 b.	Tất cả các Makefile (kể cả các thư mục con) phải được thực hiện
 c.	Khi thêm file code ở module1 (src/module1/module1_add.c), chỉ cần sửa Makefile của module đó (src/module1/Makefile) và các file .c, .h liên quan thì chương trình vẫn build đúng (make ra file binary chứa code mới).
 2.	Build được với cross toolchain (https://launchpad.net/gcc-arm-embedded) 
+
+
+FILE SYSTEM 
+Bai Tap 1: Tự tạo 1 file text và đọc nó từ 1 vị trí bất kỳ, tất cả đều sử dụng C.
+Sử dụng hàm readdir để in ra thông tin các file trong 1 folder với đường dẫn fixed trong source code. Thông tin gồm có tên, size, modify time.
+Build 1 driver có sẵn hàm read/write sau đó viết 1 chương trình C để đọc file và xem kết quả.
+Source code của driver nằm trong phần code mẫu của bài tập.
+Step để build: Gõ lệnh make, sau đó gõ lệnh «sudo insmod misc-module». Sau khi load thành công sẽ có file /dev/misc-module được tạo ra. Chúng ta sẽ đọc ghi vào file đó
+
+Bai Tap 2: Viết 1 chương trình C tạo 2 thread, cả 2 thread đều ghi vào chung 1 file, sử dụng mutex để bảo vệ file, sử dụng wrapper function thay cho hàm ghi file thông thường.
+
+Bai Tap 3: Viết 1 chương trình chat theo mô hình client server, cả 2 chạy cùng trên 1 máy tính, biên dịch file mã nguồn bằng Makefile.
+

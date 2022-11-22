@@ -1,3 +1,6 @@
+//build gcc bai2.c -o bai2 -lpthread
+//./bai2
+
 #include <stdio.h> 
 #include <stdlib.h>
 #include <time.h>
