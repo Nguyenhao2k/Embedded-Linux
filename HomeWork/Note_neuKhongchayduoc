@@ -1,0 +1,7 @@
+Co mot vai ly do gi do thi em chay make thi bi loi va khong tao ra file .ko. Va sau khi tim hieu thi em can phai:
+1. sudo apt install flex
+2. sudo apt-get install bison
+Va sau chay lai make thi se tao ra file .ko
+4. insmod chrdev_random.ko // co them them buf_size khac neu muon (mac dinh la 10)
+5. cat /dev/chrdev_random
+6. rmmod chrdev_random
